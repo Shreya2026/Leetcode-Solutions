@@ -19,7 +19,7 @@
 //Striver Solution
 
 import java.util.*;
-public class Main {
+public class Solution {
     static int findMaxConsecutiveOnes(int nums[]) {
         int cnt = 0;
         int maxi = 0;
