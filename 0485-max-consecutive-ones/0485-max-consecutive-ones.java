@@ -1,5 +1,5 @@
 //my solution tie with striver just striver's better in readeability
-class Solution {
+/*class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
         int n=nums.length;
         int maxOnes=0,count=0;
@@ -13,11 +13,11 @@ class Solution {
         if(count>maxOnes) maxOnes=count;
         return maxOnes;
     }
-}
+}*/
 
 
 //Striver Solution
-/*
+
 import java.util.*;
 public class Main {
     static int findMaxConsecutiveOnes(int nums[]) {
@@ -34,10 +34,5 @@ public class Main {
         }
         return maxi;
     }
-    public static void main(String args[]) {
-        int nums[] = { 1, 1, 0, 1, 1, 1 };
-        int ans = findMaxConsecutiveOnes(nums);
-        System.out.println("The maximum  consecutive 1's are " + ans);
-    }
 }
-*/
+   
