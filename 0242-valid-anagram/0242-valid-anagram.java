@@ -1,19 +1,32 @@
+/*class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length()!=t.length()) return false;
+        char[] s1=(s.toCharArray());
+        char[] t1=(t.toCharArray());
+        Arrays.sort(s1);
+        Arrays.sort(t1);
+
+        for(int i=0;i<s.length();i++){                //instead of for loop return Arrays.equals(s1,t1)
+            if(s1[i]!=t1[i]) return false;
+        }
+        return true;
+    }
+}*/
+
+
+
 class Solution {
     public boolean isAnagram(String s, String t) {
-        int s1=s.length();
-        int t1=t.length();
-        if(s1!=t1){
-            return false;
+        if(s.length()!=t.length()) return false;
+        int freq[]=new int[26];
+        for(int i=0;i<s.length();i++){
+            freq[s.charAt(i)-'a']++;
+            freq[t.charAt(i)-'a']--;
+
         }
-        int[] arr=new int[26];
-        for(int i=0;i<s1;i++){
-            arr[s.charAt(i)-'a']++;
-        }
-        for(int i=0;i<s1;i++){
-            arr[t.charAt(i)-'a']--;
-            if(arr[t.charAt(i)-'a']==-1){
-                return false;
-            }
+
+        for(int count:freq){
+            if(count!=0) return false;
         }
         return true;
     }
