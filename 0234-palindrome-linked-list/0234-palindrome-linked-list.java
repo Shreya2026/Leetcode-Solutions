@@ -13,10 +13,12 @@ class Solution {
         ListNode mid = middleNode(head);
         ListNode headSecond = reverseList(mid);
         ListNode rereverseHead = headSecond;
+        boolean result = true;
 
         // compare both the halves
         while (head != null && headSecond != null) {
             if (head.val != headSecond.val) {
+                result=false;
                 break;
             }
             head = head.next;
@@ -24,7 +26,7 @@ class Solution {
         }
         reverseList(rereverseHead);
 
-        return head == null || headSecond == null;
+        return result;
     }
      public ListNode reverseList(ListNode head) {
         if (head == null) {
