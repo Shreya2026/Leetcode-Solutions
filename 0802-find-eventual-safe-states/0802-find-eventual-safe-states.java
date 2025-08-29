@@ -1,3 +1,8 @@
+//\U0001f539 Complexity
+
+//Time: O(V + E) → process each node & edge once.
+//Space: O(V + E) for reverse graph + queue.
+
 import java.util.*;
 
 class Solution {
