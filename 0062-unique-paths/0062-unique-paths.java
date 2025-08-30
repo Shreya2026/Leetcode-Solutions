@@ -6,8 +6,8 @@ class Solution {
                 if(i==0&&j==0) dp[i][j]=1;
                 else{
                     int up=(i>0)?dp[i-1][j]:0;
-                    int down=(j>0)?dp[i][j-1]:0;
-                    dp[i][j]=up+down;
+                    int left=(j>0)?dp[i][j-1]:0;
+                    dp[i][j]=up+left;
                 }
             }
         }
